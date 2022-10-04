@@ -48,5 +48,22 @@ namespace parking_system.Models
                 Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente.");
             }
         }
+
+        public void listingVehicles()
+        {
+            if (vehicles.Any())
+            {
+                Console.WriteLine("Os veículos estacionados são:");
+
+                    foreach (string item in vehicles)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+            }
+            else
+            {
+                Console.WriteLine("Não há veículos estacionados!");
+            }
+        }
     }
 }

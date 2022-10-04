@@ -37,7 +37,7 @@ while (displayMenu)
             break;
 
         case "3":
-            Console.WriteLine("Listando!");
+            parking.listingVehicles();
             break;
 
         case "4":
