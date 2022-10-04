@@ -23,5 +23,30 @@ namespace parking_system.Models
 
             vehicles.Add(Console.ReadLine());
         }
+
+        public void removeVehicles()
+        {
+            Console.WriteLine("Digite a placa do veículo para remover:");
+
+            string? board = Console.ReadLine();
+
+            if(vehicles.Any(x => x.ToUpper() == board?.ToUpper()))
+            {
+                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+
+
+                int hours = 0;
+                decimal totalValue = 0;
+
+                hours = Convert.ToInt32(Console.ReadLine());
+                totalValue = (initialPrice) + pricePerHour * hours;
+
+                Console.WriteLine($"O veículo {board} foi removido e o preço total foi de: R$ {totalValue}");
+            }
+            else
+            {
+                Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente.");
+            }
+        }
     }
 }

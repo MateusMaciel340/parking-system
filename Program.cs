@@ -33,7 +33,7 @@ while (displayMenu)
             break;
         
         case "2":
-            Console.WriteLine("Removendo!");
+            parking.removeVehicles();
             break;
 
         case "3":
