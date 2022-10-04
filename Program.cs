@@ -29,7 +29,7 @@ while (displayMenu)
     switch (Console.ReadLine())
     {
         case "1":
-            Console.WriteLine("Adicionando!");
+            parking.addingVehicles();
             break;
         
         case "2":

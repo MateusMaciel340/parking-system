@@ -16,5 +16,12 @@ namespace parking_system.Models
             this.initialPrice = initialPrice;
             this.pricePerHour = pricePerHour;
         }
+
+        public void addingVehicles()
+        {
+            Console.WriteLine("Digite a placa do veículo para estacionar:");
+
+            vehicles.Add(Console.ReadLine());
+        }
     }
 }
