@@ -41,6 +41,8 @@ namespace parking_system.Models
                 hours = Convert.ToInt32(Console.ReadLine());
                 totalValue = (initialPrice) + pricePerHour * hours;
 
+                vehicles.Remove(board);
+
                 Console.WriteLine($"O veículo {board} foi removido e o preço total foi de: R$ {totalValue}");
             }
             else
