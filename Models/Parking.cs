@@ -17,20 +17,20 @@ namespace parking_system.Models
             this.pricePerHour = pricePerHour;
         }
 
-        public void addingVehicles()
+        public void AddingVehicles()
         {
             Console.WriteLine("Digite a placa do veículo para estacionar:");
 
             vehicles.Add(Console.ReadLine());
         }
 
-        public void removeVehicles()
+        public void RemoveVehicles()
         {
             Console.WriteLine("Digite a placa do veículo para remover:");
 
-            string? board = Console.ReadLine();
+            string board = Console.ReadLine();
 
-            if(vehicles.Any(x => x.ToUpper() == board?.ToUpper()))
+            if(vehicles.Any(x => x.ToUpper() == board.ToUpper()))
             {
                 Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
 
@@ -41,6 +41,8 @@ namespace parking_system.Models
                 hours = Convert.ToInt32(Console.ReadLine());
                 totalValue = (initialPrice) + pricePerHour * hours;
 
+                vehicles.Remove(board);
+
                 Console.WriteLine($"O veículo {board} foi removido e o preço total foi de: R$ {totalValue}");
             }
             else
@@ -49,7 +51,7 @@ namespace parking_system.Models
             }
         }
 
-        public void listingVehicles()
+        public void ListingVehicles()
         {
             if (vehicles.Any())
             {

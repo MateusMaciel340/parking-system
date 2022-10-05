@@ -29,15 +29,15 @@ while (displayMenu)
     switch (Console.ReadLine())
     {
         case "1":
-            parking.addingVehicles();
+            parking.AddingVehicles();
             break;
         
         case "2":
-            parking.removeVehicles();
+            parking.RemoveVehicles();
             break;
 
         case "3":
-            parking.listingVehicles();
+            parking.ListingVehicles();
             break;
 
         case "4":
